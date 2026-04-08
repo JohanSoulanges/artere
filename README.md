@@ -22,7 +22,7 @@ Exercice :
 # Partie 2
 
 En tant que client sur mon site e-commerce ils devront pouvoir : Créer un panier d'achat, ajouter des produits à mon panier , et avoir le total de mon panier
-Exercice
+
 
 Créer un modèle pouvant représenter un panier
 Créer les fonctionnalités nécessaire pour pouvoir ajouter, supprimer, modifier 1 ou plusieurs produits dans un panier ainsi que de visualiser le montant total de mon panier.
