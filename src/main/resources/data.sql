@@ -17,3 +17,6 @@ INSERT INTO products (id, name, price, stock_quantity, category_id) VALUES (7, '
 INSERT INTO products (id, name, price, stock_quantity, category_id) VALUES (8, 'Sony WH-1000XM5', 349.99, 45, 4);
 INSERT INTO products (id, name, price, stock_quantity, category_id) VALUES (9, 'LG OLED 55"', 1299.99, 15, 4);
 INSERT INTO products (id, name, price, stock_quantity, category_id) VALUES (10, 'AirPods Pro 2', 279.99, 70, 1);
+
+ALTER TABLE categories ALTER COLUMN id RESTART WITH 100;
+ALTER TABLE products ALTER COLUMN id RESTART WITH 100;
