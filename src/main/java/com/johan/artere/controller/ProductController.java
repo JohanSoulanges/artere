@@ -2,6 +2,7 @@ package com.johan.artere.controller;
 
 import com.johan.artere.dto.ProductDto;
 import com.johan.artere.service.ProductService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/products")
+@Tag(name = "Product")
 public class ProductController {
 
     private final ProductService productService;
