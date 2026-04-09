@@ -3,6 +3,7 @@ package com.johan.artere.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,5 +24,9 @@ public class Cart {
     @Builder.Default
     private List<CartItem> items = new ArrayList<>();
 
-
+    public BigDecimal getTotal() {
+        return items.stream()
+                .map(CartItem::getSubTotal)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
 }

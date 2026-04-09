@@ -3,6 +3,8 @@ package com.johan.artere.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "cart_items")
 @Getter
@@ -27,4 +29,7 @@ public class CartItem {
     @Column(nullable = false)
     private Integer quantity;
 
+    public BigDecimal getSubTotal() {
+        return product.getPrice().multiply(BigDecimal.valueOf(quantity));
+    }
 }

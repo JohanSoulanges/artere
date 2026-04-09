@@ -14,6 +14,7 @@ public class CartMapper {
         CartDto.Response dto = new CartDto.Response();
         dto.setId(cart.getId());
         dto.setItems(cart.getItems().stream().map(this::toItemResponse).collect(Collectors.toList()));
+        dto.setTotal(cart.getTotal());
         return dto;
     }
 
@@ -24,6 +25,7 @@ public class CartMapper {
         dto.setProductName(item.getProduct().getName());
         dto.setUnitPrice(item.getProduct().getPrice());
         dto.setQuantity(item.getQuantity());
+        dto.setSubTotal(item.getSubTotal());
         return dto;
     }
 }
